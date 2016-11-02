@@ -59,5 +59,19 @@ public class VertexTest {
 		n3.connect(n4);
 		Assert.assertTrue("LTR indirect connected", n1.isConnected(n4));
 	}
+	
+	@Test
+	public void testTestAdjacentNodes() {
+		Vertex<Integer> n1 = new Vertex<Integer>(1);
+		Assert.assertTrue("Adjacent nodes must be empty", n1.getAdjacentVertices().isEmpty());
+	}
+	
+	@Test
+	public void testConnectLoop() {
+		Vertex<Integer> v = new Vertex<Integer>(1);
+		v.connect(v);
+		Assert.assertFalse("Adjacent nodes should not contain the vertex itself", v.getAdjacentVertices().contains(v));
+		
+	}
 
 }

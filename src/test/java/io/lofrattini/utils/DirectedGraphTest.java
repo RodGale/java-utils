@@ -70,4 +70,17 @@ public class DirectedGraphTest {
 		Assert.assertFalse("Connection not expected", set.isConnected(3, 4));
 	}
 	
+	@Test
+	public void testIndirectLoops() {
+		ConnectedSet<Integer> set = new DirectedGraph<Integer>();
+		set.connect(1, 2);
+		set.connect(2, 3);
+		set.connect(3, 1);
+		Assert.assertTrue("Connection expected", set.isConnected(1, 2));
+		Assert.assertTrue("Connection expected", set.isConnected(1, 3));
+		Assert.assertTrue("Connection expected", set.isConnected(3, 2));
+		
+		
+	}
+	
 }
