@@ -9,6 +9,7 @@ import java.util.Set;
 
 /**
  * A template implementation of the Union-Find set data structure.
+ * In this data structure connections are bidirectional/symmetric and transitive.
  * {@link https://en.wikipedia.org/wiki/Disjoint-set_data_structure}
  * @author Lorenzo Frattini
  *

@@ -4,16 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Directed graph data structure for generic objects
+ * Directed graph data structure for generic objects.
+ * In this data structure connections are directed/asymmetric and transitive.
  * @author Lorenzo Frattini
  *
  * @param <T> the type to be stored in the graph
  */
-public class Graph<T> implements ConnectedSet<T> {
+public class DirectedGraph<T> implements ConnectedSet<T> {
 	
 	private Map<T, Vertex<T>> verticesMap = new HashMap<T, Vertex<T>>();
 
-	public Graph() {
+	public DirectedGraph() {
 		super();
 	}
 	
