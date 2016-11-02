@@ -31,8 +31,6 @@ public class DirectedGraph<T> implements ConnectedSet<T> {
 	}
 	
 	public void connect(T a, T b) {
-		add(a);
-		add(b);
 		Vertex<T> va = getVertex(a);
 		Vertex<T> vb = getVertex(b);
 		va.connect(vb);
