@@ -14,7 +14,7 @@ import java.util.Set;
  *
  * @param <T> the generic item type
  */
-public class UnionFind<T> {
+public class UnionFind<T> implements ConnectedSet<T> {
 	
 	private Map<T, Set<T>> itemMap = new HashMap<T, Set<T>>();
 	
