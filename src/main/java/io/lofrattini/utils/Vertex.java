@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Set;
 
 /**
- * Simple generic data structure for directed graphs.
+ * Generic vertex/node for a directed graph data structure
  * @author Lorenzo Frattini
  *
  * @param <T> the type of node (the information stored in the graph)
