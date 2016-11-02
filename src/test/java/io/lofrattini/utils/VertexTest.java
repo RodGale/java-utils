@@ -42,7 +42,7 @@ public class VertexTest {
 		Vertex<Integer> s1 = new Vertex<Integer>(1);
 		Vertex<Integer> s2 = new Vertex<Integer>(2);
 		Vertex<Integer> s3 = new Vertex<Integer>(3);
-		Vertex<Integer> s4 = new Vertex<Integer>(3);
+		Vertex<Integer> s4 = new Vertex<Integer>(4);
 		s1.connect(s2);
 		s3.connect(s4);
 		Assert.assertFalse("Unexpected connection", s1.isConnected(s4));
