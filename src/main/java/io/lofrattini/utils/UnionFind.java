@@ -53,5 +53,11 @@ public class UnionFind<T> implements ConnectedSet<T> {
 			itemMap.put(b, aSet);
 		}
 	}
+	
+	@Override
+	public Set<T> getConnectedSet(T a) {
+		return itemMap.getOrDefault(a, new HashSet<T>());
+	}
+
 
 }

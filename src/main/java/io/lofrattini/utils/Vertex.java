@@ -76,4 +76,19 @@ public class Vertex<T> implements Comparable<Vertex<T>> {
 		return value.toString();
 	}
 	
+	public Set<Vertex<T>> getConnected() {
+		PriorityQueue<Vertex<T>> queue = new PriorityQueue<Vertex<T>>(adjacentVertices);
+		Set<Vertex<T>> visited = new HashSet<Vertex<T>>();
+		while(!queue.isEmpty()) {
+			Vertex<T> current = queue.poll();
+			visited.add(current);
+			for (Vertex<T> n : current.getAdjacentVertices()) {
+				if (!visited.contains(n)) {
+					queue.add(n);
+				}
+			}
+		}
+		return visited;
+	}
+	
 }

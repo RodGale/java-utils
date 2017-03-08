@@ -1,5 +1,7 @@
 package io.lofrattini.utils;
 
+import java.util.Set;
+
 /**
  * An interface for set of items that can be mutually connected either directly or indirectly.
  * @author Lorenzo Frattini
@@ -23,5 +25,7 @@ public interface ConnectedSet<T> {
 	 * @return true if there is a connection, false otherwise
 	 */
 	public boolean isConnected(T a, T b);
+	
+	public Set<T> getConnectedSet(T a);
 
 }

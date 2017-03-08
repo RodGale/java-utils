@@ -1,7 +1,9 @@
 package io.lofrattini.utils;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Directed graph data structure for generic objects.
@@ -44,5 +46,16 @@ public class DirectedGraph<T> implements ConnectedSet<T> {
 		}
 		return false;
 	}
+	
+	@Override
+	public Set<T> getConnectedSet(T a) {
+		Vertex<T> va = getVertex(a);
+		Set<T> connectedValues = new HashSet<T>();
+		for (Vertex<T> vertex : va.getConnected()) {
+			connectedValues.add(vertex.getValue());
+		}
+		return connectedValues;
+	}
+
 
 }
